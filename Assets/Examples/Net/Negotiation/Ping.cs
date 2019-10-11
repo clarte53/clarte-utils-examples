@@ -10,7 +10,7 @@ namespace CLARTE.Net.Negotiation
 	{
 		protected Base network;
 
-		void Start()
+		protected void Start()
 		{
 			network = GetComponent<Base>();
 
