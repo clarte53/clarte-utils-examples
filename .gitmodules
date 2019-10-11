@@ -1,0 +1,3 @@
+[submodule "Assets/Modules/clarte-utils"]
+	path = Assets/Modules/clarte-utils
+	url = https://github.com/clarte53/clarte-utils.git
