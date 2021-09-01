@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -169,8 +170,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ConnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onDisconnected:
       m_PersistentCalls:
         m_Calls:
@@ -185,8 +184,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+DisconnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onException:
       m_PersistentCalls:
         m_Calls:
@@ -201,8 +198,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ExceptionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   channels:
   - onConnected:
       m_PersistentCalls:
@@ -229,8 +224,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ConnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onDisconnected:
       m_PersistentCalls:
         m_Calls:
@@ -245,8 +238,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+DisconnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onException:
       m_PersistentCalls:
         m_Calls:
@@ -261,22 +252,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ExceptionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onReceive:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 485502874}
-          m_MethodName: OnReceived
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 485502875}
           m_MethodName: OnReceive
           m_Mode: 0
@@ -288,8 +266,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ReceiveCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onReceiveProgress:
       m_PersistentCalls:
         m_Calls:
@@ -304,8 +280,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ReceiveProgressCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   credentials:
     username: user
     password: password
@@ -485,8 +459,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ConnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onDisconnected:
       m_PersistentCalls:
         m_Calls:
@@ -501,8 +473,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+DisconnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onException:
       m_PersistentCalls:
         m_Calls:
@@ -517,8 +487,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ExceptionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     parameters:
       heartbeat: 5
       disableHeartbeat: 0
@@ -538,8 +506,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ConnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onDisconnected:
       m_PersistentCalls:
         m_Calls:
@@ -554,8 +520,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+DisconnectionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onException:
       m_PersistentCalls:
         m_Calls:
@@ -570,22 +534,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ExceptionCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onReceive:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1580211665}
-          m_MethodName: OnReceived
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1580211666}
           m_MethodName: OnReceive
           m_Mode: 0
@@ -597,8 +548,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ReceiveCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     onReceiveProgress:
       m_PersistentCalls:
         m_Calls:
@@ -613,8 +562,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: CLARTE.Net.Negotiation.Events+ReceiveProgressCallback, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     type: 0
     parameters:
       heartbeat: 2
@@ -689,8 +636,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884508906}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10

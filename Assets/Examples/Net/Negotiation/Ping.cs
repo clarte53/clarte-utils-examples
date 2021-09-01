@@ -13,27 +13,33 @@ namespace CLARTE.Net.Negotiation
 		protected void Start()
 		{
 			network = GetComponent<Base>();
-
-			if(network is Client)
-			{
-				((Client) network).Connect();
-			}
 		}
 
 		public void OnConnected(IPAddress address, Guid guid, ushort port)
 		{
 			if(network is Client)
 			{
-				network.SendAll(0, new byte[1]);
+				StartCoroutine(Init());
 			}
 		}
 
-		public void OnReceive(IPAddress address, Guid guid, ushort port, byte[] data)
+		public void OnReceive(IPAddress address, Guid guid, ushort port, Memory.BufferPool.Buffer data)
 		{
+			Debug.LogFormat("Received packet from {0}. Sending it back.", network is Client ? "client" : "server");
+
 			StartCoroutine(Reply(data));
 		}
 
-		protected IEnumerator Reply(byte[] data)
+		protected IEnumerator Init()
+        {
+			yield return new WaitForSeconds(1f);
+
+			Debug.LogFormat("Sending first packet from {0}.", network is Client ? "client" : "server");
+
+			network.SendAll(0, new Memory.BufferPool.Buffer(null, new byte[1], false));
+		}
+
+		protected IEnumerator Reply(Memory.BufferPool.Buffer data)
 		{
 			yield return new WaitForSeconds(1f);
 

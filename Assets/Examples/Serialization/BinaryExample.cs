@@ -53,11 +53,11 @@ namespace CLARTE.Serialization {
 			StartCoroutine(serializer.Serialize(data, OnSerializationComplete));
 		}
 
-		protected void OnSerializationComplete(byte[] data, uint size)
+		protected void OnSerializationComplete(Binary.Buffer data)
 		{
-			byte[] msg = new byte[size];
+			byte[] msg = new byte[data.Size];
 
-			Array.Copy(data, msg, size);
+			Array.Copy(data.Data, msg, data.Size);
 
 			Debug.LogFormat("Serialized data (hexadecimal): {0}", BitConverter.ToString(msg).Replace("-", string.Empty));
 
